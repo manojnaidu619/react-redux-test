@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './App.css'
+import List from './List/List'
 
 const App = (props) => {
 
@@ -15,7 +16,7 @@ const App = (props) => {
    })
  }
 
- const arrOperationHandler = (index) => {
+ const arrOperationHandler = (index=0) => {
    const newFruits = [...(state.fruits)]
    newFruits.splice(index, 1)
    newstate({
@@ -29,7 +30,7 @@ const App = (props) => {
       <p>{state.name}</p>
       <button onClick={ClickHandler}>Click here!</button>
       <hr/>
-      {state.fruits.map((fruit, index) => {return <h1 onClick={() => arrOperationHandler(index)}>{fruit}</h1>})}
+      <List fruits={state.fruits} clicked={arrOperationHandler}/>
     </div>
   )
 }
