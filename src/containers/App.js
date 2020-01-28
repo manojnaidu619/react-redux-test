@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import './App.css'
-import List from './List/List'
+import '../App.css'
+import List from '../List/List'
+import App1 from './App1'
 
 const App = (props) => {
 
@@ -12,9 +13,9 @@ const App = (props) => {
  const ClickHandler = () => {
    newstate({
      ...state,
-     name: "Arun"
+     name: "Arjun"
    })
- }
+ };
 
  const arrOperationHandler = (index=0) => {
    const newFruits = [...(state.fruits)]
@@ -23,16 +24,18 @@ const App = (props) => {
      ...state,
      fruits: newFruits
    })
- }
+ };
 
   return (
     <div className="App">
       <p>{state.name}</p>
       <button onClick={ClickHandler}>Click here!</button>
-      <hr/>
       <List fruits={state.fruits} clicked={arrOperationHandler}/>
+      <hr/>
+      <App1/>
     </div>
   )
 }
+
 
 export default App
