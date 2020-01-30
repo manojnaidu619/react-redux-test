@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import '../App.css'
 import List from '../List/List'
 import App1 from './App1'
+import WithClass from '../hoc/WithClass'
 
 const App = (props) => {
 
@@ -31,13 +32,13 @@ const App = (props) => {
  };
 
   return (
-    <div className="App">
+    <WithClass class="App">
       <p>{state.name}</p>
       <button onClick={ClickHandler}>Click here!</button>
       <List fruits={state.fruits} clicked={arrOperationHandler}/>
       <hr/>
       <App1/>
-    </div>
+    </WithClass>
   )
 }
 
