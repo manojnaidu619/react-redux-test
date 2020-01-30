@@ -43,5 +43,10 @@ const App = (props) => {
   )
 }
 
+App.propTypes = {
+  name: PropTypes.string,
+  fruits: PropTypes.array
+}
+
 
 export default App
