@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../App.css'
 import List from '../List/List'
 import App1 from './App1'
 
 const App = (props) => {
+
+  useEffect(() => {
+    console.log("USeeffect")
+  })
 
  const [state, newstate] = useState({
    name: "Manoj",
