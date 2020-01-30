@@ -1,10 +1,12 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 
 class App1 extends Component{
 
   render(){
     return(
-      <h2>From App1 (Class Based component)</h2>
+      <Fragment>
+        <h2>From App1 (Class Based component)</h2>
+      </Fragment>
     )
   }
 }
