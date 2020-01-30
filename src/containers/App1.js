@@ -1,12 +1,13 @@
 import React, {Component, Fragment} from 'react'
+import Aux from '../hoc/Aux'
 
 class App1 extends Component{
 
   render(){
     return(
-      <Fragment>
+      <Aux>
         <h2>From App1 (Class Based component)</h2>
-      </Fragment>
+      </Aux>
     )
   }
 }
