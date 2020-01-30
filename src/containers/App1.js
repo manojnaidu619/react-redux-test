@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import Aux from '../hoc/Aux'
 
 class App1 extends Component{

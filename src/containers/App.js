@@ -1,14 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import '../App.css'
 import List from '../List/List'
 import App1 from './App1'
 import WithClass from '../hoc/WithClass'
+import PropTypes from 'prop-types'
 
 const App = (props) => {
-
-  useEffect(() => {
-    console.log("USeeffect")
-  })
 
  const [state, newstate] = useState({
    name: "Manoj",
@@ -16,18 +13,22 @@ const App = (props) => {
  })
 
  const ClickHandler = () => {
-   newstate({
-     ...state,
-     name: "Arjun"
+   newstate((prevState, props) => {
+     return {
+       ...state,
+       name: "Arjun"
+     }
    })
  };
 
  const arrOperationHandler = (index=0) => {
    const newFruits = [...(state.fruits)]
    newFruits.splice(index, 1)
-   newstate({
-     ...state,
-     fruits: newFruits
+   newstate((prevState, props) => {
+     return {
+       ...state,
+       fruits: newFruits
+     }
    })
  };
 

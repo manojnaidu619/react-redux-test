@@ -5,3 +5,4 @@ const WithClass = (props) => (
 )
 
 export default WithClass
+ 
