@@ -66,3 +66,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ![Stock-Chart](./scripts/stock-chart.png)
 
 ![Stock-Chart](./scripts/stock-chart.png)
+
+![Stock-Chart](scripts/stock-chart.png)
