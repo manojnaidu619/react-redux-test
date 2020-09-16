@@ -16,7 +16,7 @@ INTERVAL = 1
 OUTPUTSIZE = 'full'
 #['compact', 'full'] are the other options.
 
-PATHTOCHART = './stock-chart'
+PATHTOCHART = './scripts'
 GRIDVIEW = True
 
 PLOT = 'close'
