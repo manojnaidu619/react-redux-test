@@ -76,7 +76,7 @@ def save_chart(values):
     print("Saved new chart")
 
 def rewrite_readme():
-    code_line = f'![Stock-Chart]({PATHTOCHART}/stock-chart.png)'
+    code_line = f'![Stock-Chart](scripts/stock-chart.png)'
     readme = './README.md'
     lines = open(readme, 'r').readlines()
     if (lines[-1].rstrip() == code_line):
