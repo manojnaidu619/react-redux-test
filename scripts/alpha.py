@@ -16,7 +16,7 @@ INTERVAL = 1
 OUTPUTSIZE = 'full'
 #['compact', 'full'] are the other options.
 
-PATHTOCHART = './scripts'
+PATHTOCHART = './stock-chart'
 GRIDVIEW = True
 
 PLOT = 'close'
@@ -76,11 +76,17 @@ def save_chart(values):
     print("Saved new chart")
 
 def rewrite_readme():
-    file = open('./README.md', 'a')
-    file.write('\n')
-    file.write('![Stock-Chart](./scripts/stock-chart.png)')
-    file.write('\n')
-    file.close()
+    code_line = f'![Stock-Chart]({PATHTOCHART}/stock-chart.png)'
+    readme = './README.md'
+    lines = open(readme, 'r').readlines()
+    if (lines[-1].rstrip() == code_line):
+        lines[-1] = code_line
+        open(readme, 'w').writelines(lines)
+    else:
+        file = open('./README.md', 'a')
+        file.write('\n')
+        file.write(code_line)
+        file.close()
 
 # Driver Code
 request_type, request_object = setup_request_object(REQ_TYPE, SYMBOL, INTERVAL)
